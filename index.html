@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Only 4U</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link
+      rel="shortcut icon"
+      href="asset/img/faviocon.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="global.css" />
+
+  </head>
+  <body>
+    <div class="author">
+      <a href="https://www.instagram.com/dimytma.17"  rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+        <p class="ig">@dimytma.17</p>
+      </a>
+    </div>
+    <div class="wrapper1" id="wrapper1">
+      <button id="suratlove" style="border: none; background: none; padding: 0">
+        <div class="btn-play">
+          <img src="asset/img/suratlove.jpg" width="100%" />
+        </div>
+      </button>
+      <br />
+    </div>
+    <div class="elm-surat" id="surat">
+      <h2 class="surat"><b>KLIK SURATNYA YAAA!</b></h2>
+    </div>
+
+    <!-- POP UP 1 -->
+    <div id="popup1" class="popup1">
+      <h2 class="halo">Haloo, sebelum lanjut, masukin nama kamu dulu ya</h2>
+      <form>
+        <input
+          type="text"
+          id="nama"
+          maxlength="10"
+          class="teksnama"
+          placeholder="Masukin nama kamu disini"
+          required
+        />
+        <center>
+          <input
+            type="submit"
+            value="Lanjut"
+            class="lanjut-pop1"
+            id="lanjutpopup1"
+            onclick="ketikk();"
+          />
+        </center>
+      </form>
+    </div>
+    <!-- <script>
+      function validateForm() {
+        var name = document.getElementById("nama").value;
+        if(name === ""){
+          alert('Masukkan Nama Kamu Dulu Ya Sayang');
+          return false;
+        }
+        return true;
+      }
+    </script> -->
+
+    <div class="popup2" id="popup2">
+      <img src="asset/img/lucu.gif" class="gif1" /><br />
+      <p class="ketik1" id="ketik1"></p>
+      <div class="div-wa" id="div-wa">
+        <button class="lanjut" id="lanjut-wa" onclick="ketikk2();">Lanjut</button>
+      </div>
+    </div>
+
+    <script>
+      var audio = new Audio("asset/mp3/riplovecut.mp3");
+
+      function playriplove() {
+        audio.play();
+      }
+      
+      var i = 0;
+      var speed = 70;
+      function ketikk() {
+        var nama = document.getElementById("nama").value;
+        var txt =
+        "Haii " +
+        nama +
+        ` ❤️, aku cuma mau bilang, 
+        kalau aku tuh sayaaaanggg banget sama kamu <3 .
+        Semangat terus jalani harinya, 
+        kalau ada masalah, bilang ya sama aku...`;
+        var lanjutWa = document.getElementById("div-wa");
+
+
+        if (i < txt.length) {
+          document.getElementById("ketik1").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(ketikk, speed);
+        } 
+
+        if (i === txt.length) {
+          lanjutWa.style.display = "block";
+        }
+      }
+
+      var popupbtn = document.getElementById("suratlove");
+      var popup1 = document.getElementById("popup1");
+
+      popupbtn.addEventListener("click", function () {
+        popup1.style.display = "block";
+        wrapper1.style.display = "none";
+        surat.style.display = "none";
+        playriplove();
+      });
+
+      document
+        .getElementById("lanjutpopup1")
+        .addEventListener("click", function () {
+          event.preventDefault(); /*INI BIAR PERILAKU INPUT DIHENTIKAN*/
+          document.getElementById("popup1").style.display = "none";
+          document.getElementById("popup2").style.display = "block";
+          // ketikk2();
+        });
+
+    </script>
+
+    <!-- POPUP TERAKHIRRRR DAH CAPEEE -->
+    <div class="popup3" id="popup3">
+      <p class="ketik2" id="ketik2"></p><br>
+      <a href="https://api.whatsapp.com/send?phone=&text=Aku%20juga%20sayaaannng%20bangett%20sama%20kamu%20❤️"><button class="lanjut" id="lanjut-share">Lanjut</button></a>
+    </div>
+    <script>
+      var x = 0;
+      var cepat = 80;
+
+      function ketikk2() {
+        var text = "Bales Pesan Ke WhatsApp aku yaa ❤️";
+
+
+        if (x < text.length) {
+          document.getElementById("ketik2").innerHTML += text.charAt(x);
+          x++;
+          setTimeout(ketikk2, cepat);
+        } 
+
+        if (x === text.length) {
+          share.style.display = "block";
+        }
+      }
+
+      var btn3 = document.getElementById("lanjut-wa");
+      var pop3 = document.getElementById("popup3");
+
+      btn3.addEventListener("click", function () {
+        pop3.style.display = "block";
+        document.getElementById("popup2").style.display = "none";
+        ketikk2();
+      });
+
+    </script>
+
+  </body>
+</html>

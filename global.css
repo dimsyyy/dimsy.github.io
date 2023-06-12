@@ -1,0 +1,188 @@
+html,body,* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #222;
+  position: relative;
+  background-image: url(asset/img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+}
+
+/* body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(bg.jpg);
+  background-size: cover;
+  z-index: -1; */
+/* } */
+.wrapper1 {
+  display: block;
+  width: 15%;
+  margin: auto;
+  margin-top: 20%;
+  background-color: transparent;
+  /* display: none; */
+}
+
+.btn-play {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 14px rgba(255, 255, 255, 0.616);
+  transition: transform 0.3s ease;
+
+}
+.btn-play:hover {
+  transform: scale(0.9);
+}
+
+
+.elm-surat .surat {
+  font-size: smaller;
+  text-align: justify;
+  color: whitesmoke;
+  text-align: center;
+}
+  
+.popup1 {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  padding: 9% 9% 5% 9%;
+  width: 48%;
+  margin-bottom: 2%;
+  margin-top: 20%;
+  border-radius: 10px;
+  box-shadow: 0 0 9px rgba(255, 255, 255, 0.301);
+  animation-name: scaleFade;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  will-change: transform;
+
+}
+
+@keyframes scaleFade {
+  from {
+      transform: scale(0) translateZ(0);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1) translateZ(0);
+      opacity: 1;
+  }
+}
+
+.popup1 .halo{
+  font-size: smaller;
+  color: whitesmoke;
+  text-align: center;
+
+}
+.popup1 .teksnama{
+  width: 100%;
+  margin-top: 3%;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Rubik';
+  padding: 2%;
+  text-align: center;
+}
+.popup1 .lanjut-pop1 {
+  padding: 1%;
+  margin-top: 4%;
+  font-family: 'Rubik';
+  color: black;
+  box-shadow: 0 0 9px rgba(255, 255, 255, 0.301);
+
+}
+.popup2, .popup3 {
+  position: absolute;
+  display: none;
+  top: 20%;
+  left: 6%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  padding: 9% 9% 5% 9%;
+  width: 70%;
+  overflow: hidden;
+  margin-bottom: 2%;
+  margin-top: 20%;
+  border-radius: 10px;
+  box-shadow: 0 0 9px rgba(255, 255, 255, 0.301);
+  animation-name: scaleFade;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  align-items: center;
+  text-align: center;
+  will-change: transform;
+}
+.popup2 .gif1 {
+  width: 30%;
+  box-shadow: 0 0 9px rgba(255, 255, 255, 0.301);
+}
+.popup2 .ketik1{
+  color: whitesmoke;
+  display: inline-block;
+  margin-top: 15%;
+}
+.div-wa {
+  margin-top: 4%;
+  display: none;
+  animation-name: scaleFade;
+  animation-duration: 1s;
+}
+.lanjut{
+  padding: 1%;
+  margin-top: 4%;
+  font-family: 'Rubik';
+  color: black;
+  box-shadow: 0 0 9px rgba(255, 255, 255, 0.301);
+
+}
+
+.ketik2{
+  color: whitesmoke;
+  margin: 15% 3%;
+}
+.author {
+  position: fixed;
+  z-index: 999;
+  top: 97%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.404);
+  padding: 1% 1.5%;
+  border-radius: 10px;
+}
+.author a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.author a .ig{
+  margin-left: 5px;
+  
+}
